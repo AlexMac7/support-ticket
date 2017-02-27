@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::get('new_ticket', 'TicketsController@create');
+Route::post('new_ticket', 'TicketsController@store');
